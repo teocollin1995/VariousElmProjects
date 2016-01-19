@@ -7,9 +7,9 @@ import Graphics.Element
 import Random
 import Time
 min : Int
-min = 0
+min = 0 -- set this
 max : Int
-max = 148
+max = 148 -- set this - should be largest index of image in assets/
 gen : Random.Generator Int
 gen = Random.int min max
 clockTime : Signal Time.Time
@@ -47,30 +47,5 @@ view model =
 
 
 
--- view model =
---   div [ style [ "width" => "200px" ] ]
---     [ h2 [headerStyle] [text (toString model.image)]
---     , div [imgStyle ("assets/" ++ (toString model.image))] []
---     ]
-
-
--- headerStyle : Attribute
--- headerStyle =
---   style
---     [ "width" => "200px"
---     , "text-align" => "center"
---     ]
-
-
--- imgStyle : String -> Attribute
--- imgStyle loc =
---   style
---     [ "display" => "inline-block"
---     , "width" => "500px"
---     , "height" => "500px"
---     , "background-position" => "center center"
---     , "background-size" => "cover"
---     , "background-image" => ("url('" ++ loc ++ "')")
---     ]
 
 
